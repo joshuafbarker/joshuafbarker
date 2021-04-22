@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-gray-800 dark:bg-gray-900 dark:text-gray-400;
+  }
+
+  main a {
+    @apply font-semibold text-blue-700 hover:text-blue-900;
+  }
+}

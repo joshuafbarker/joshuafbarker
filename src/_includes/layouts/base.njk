@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>joshBarker.{{ title }}</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="mx-auto max-w-screen-md px-4 py-16 flex justify-between">
+    <img src="/assets/images/me.jpeg" alt="Joshua Barker" height="100" width="100" class="rounded-full">
+    <div class="flex flex-col justify-end text-sm">
+      <a class="hover:text-blue-600" href="https://twitter.com/_joshuatrees" target="_blank"><span class="font-bold text-gray-900 dark:text-blue-600">Tw.</span> @_joshuatrees</a>
+      <a class="hover:text-blue-600 mt-1" href="https://github.com/joshuafbarker" target="_blank"><span class="font-bold text-gray-900 dark:text-blue-600">Gh.</span> joshuafbarker</a>
+    </div>
+  </header>
+  <main class="mx-auto max-w-screen-md p-4">
+    {{ content | safe }}
+  </main>
+</body>
+</html>
