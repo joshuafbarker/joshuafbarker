@@ -8,6 +8,6 @@
   }
 
   main a {
-    @apply font-semibold text-blue-700 hover:text-blue-900;
+    @apply font-semibold text-blue-700 hover:text-blue-900 dark:text-yellow-300 dark:hover:text-yellow-500;
   }
 }
