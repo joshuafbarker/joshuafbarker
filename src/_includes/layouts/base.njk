@@ -5,10 +5,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hello there, my name is Josh and I am web developer.">
+  <meta name="description" content="Hello, my name is Joshua Barker and I am a Web Developer.">
 
   {# favicon/shortcut icons #}
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤘</text></svg>">
+
+  {# social meta tags #}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@_joshuatrees">
+  <meta name="twitter:creator" content="@_joshuatrees">
+  <meta name="twitter:image" content="/assets/images/me-400.jpg">
+
+  <meta property="og:title" content="Joshua Barker">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="Hello, my name is Joshua Barker and I am a Web Developer.">
+  <meta property="og:image" content="/assets/images/workspace.jpg">
+  <meta property="og:image:width" content="1500" />
+  <meta property="og:image:height" content="844" />
+  <meta property="og:locale" content="en_US" />
+
+  {# tracking #}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75827339-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-75827339-1');
+  </script>
+
 
   <title>Joshua Barker - {{ title }}</title>
   <link rel="stylesheet" href="/assets/styles.css">
