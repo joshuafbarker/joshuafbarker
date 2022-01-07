@@ -1,8 +1,7 @@
 {
   "name": "joshuafbarker",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Personal site",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joshuafbarker/joshuafbarker.git"
@@ -14,22 +13,22 @@
   },
   "homepage": "https://github.com/joshuafbarker/joshuafbarker#readme",
   "scripts": {
-    "clean": "rimraf _site/",
-    "dev:css": "postcss src/assets/css/styles.css -o _site/assets/styles.css --watch",
-    "dev:site": "eleventy --serve",
-    "dev": "npm-run-all clean --parallel dev:* --print-label",
-    "build:css": "NODE_ENV=production postcss src/assets/css/styles.css -o _site/assets/styles.css",
-    "build:site": "ELEVENTY_ENV=production eleventy",
-    "build": "run-s clean build:* --print-label"
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
+    "lint": "next lint"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "autoprefixer": "^10.3.1",
-    "cssnano": "^5.0.7",
+    "@types/react": "^17.0.38",
+    "eslint": "8.6.0",
+    "eslint-config-next": "12.0.7",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^2.2.6"
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
