@@ -1,22 +1,31 @@
-import { getAllPublishedPosts } from '../services/mdx';
-import Link from 'next/link';
+import Image from 'next/image';
+import styles from 'styles/pages/index.module.css';
 
-const HomePage = ({ posts }) => {
+const HomePage = ({ image }) => {
   return (
     <>
-      <h1>Home Page.</h1>
-      <h2>Posts</h2>
-      {posts.map(post => {
-        return <Link key={post.slug} href={`/blog/${post.slug}`}>{post.frontMatter?.title}</Link>;
-      })}
+      <section className="avatar">
+        <Image src={image} alt="Joshua Barker" width={200} height={200} className={styles.avatar} />
+      </section>
+      <section className="info">
+        <h1>Joshua Barker</h1>
+      </section>
     </>
   );
 };
 
 export const getStaticProps = async () => {
-  const posts = getAllPublishedPosts();
+  // const posts = getAllPublishedPosts();
+
+  // fetch github user data
+  const ghRes = await fetch('https://api.github.com/users/joshuafbarker');
+  const ghData = await ghRes.json();
+
+  const { avatar_url: image } = ghData;
   return {
-    props: { posts }
+    props: {
+      image
+    }
   };
 };
 
