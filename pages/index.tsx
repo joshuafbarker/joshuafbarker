@@ -8,7 +8,10 @@ const HomePage = ({ image }) => {
         <Image src={image} alt="Joshua Barker" width={200} height={200} className={styles.avatar} />
       </section>
       <section className="info">
-        <h1>Joshua Barker</h1>
+        <h3>Hello. My name is Josh.</h3>
+        <p>I&rsquo;m a Senior Engineer @ <a href="https://redventures.com" target="_blank" rel="noreferrer">Red Ventures</a>.</p>
+        <p className="mt">Work inquiries or just want to chat?</p>
+        <p>Catch me on <a href="https://twitter.com/point_ix">twitter</a> or <a href="mailto:joshuafbarker@gmail.com">joshuafbarker@gmail.com</a>.</p>
       </section>
     </>
   );

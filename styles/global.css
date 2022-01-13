@@ -15,8 +15,8 @@ main {
   gap: 2rem;
 }
 
-.info {
-  background-color: green;
+.mt {
+  margin-top: 1rem;
 }
 
 /* tablet and above */
