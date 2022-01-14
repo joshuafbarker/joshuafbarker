@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { getPost, getAllPublishedPosts } from '../../services/mdx';
 
-const BlogPost = ({ code, frontMatter }) => {
+const PlaylistPost = ({ code, frontMatter }) => {
   // render post component
   const PostBody = useMemo(() => getMDXComponent(code), [code]);
 
@@ -17,7 +17,7 @@ const BlogPost = ({ code, frontMatter }) => {
 // get current post
 export const getStaticProps = async ({ params }) => {
   // get the post based on current slug
-  const post = await getPost(params.slug, 'blog');
+  const post = await getPost(params.slug, 'playlist');
 
   // return the post props (code, frontMatter)
   return {
@@ -28,7 +28,7 @@ export const getStaticProps = async ({ params }) => {
 // statically build all published posts using this template
 export const getStaticPaths = async () => {
   // build paths array by extracting the slug from all published posts
-  const paths = getAllPublishedPosts('blog').map(({ slug }) => ({ params: { slug } }));
+  const paths = getAllPublishedPosts('playlist').map(({ slug }) => ({ params: { slug } }));
 
   // return the paths, and set fallback to false, to only pre-render fetched posts
   return {
@@ -37,4 +37,4 @@ export const getStaticPaths = async () => {
   };
 };
 
-export default BlogPost;
+export default PlaylistPost;

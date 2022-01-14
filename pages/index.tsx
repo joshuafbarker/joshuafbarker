@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import styles from 'styles/pages/index.module.css';
+import { getAllPublishedPosts } from 'services/mdx';
 
-const HomePage = ({ image }) => {
+const HomePage = ({ image, posts }) => {
   return (
-    <>
+    <div className={styles.container}>
       <section className="avatar">
         <Image src={image} alt="Joshua Barker" width={200} height={200} className={styles.avatar} />
       </section>
@@ -13,12 +14,12 @@ const HomePage = ({ image }) => {
         <p className="mt">Work inquiries or just want to chat?</p>
         <p>Catch me on <a href="https://twitter.com/point_ix">twitter</a> or <a href="mailto:joshuafbarker@gmail.com">joshuafbarker@gmail.com</a>.</p>
       </section>
-    </>
+    </div>
   );
 };
 
 export const getStaticProps = async () => {
-  // const posts = getAllPublishedPosts();
+  const posts = getAllPublishedPosts('blog');
 
   // fetch github user data
   const ghRes = await fetch('https://api.github.com/users/joshuafbarker');
@@ -27,7 +28,8 @@ export const getStaticProps = async () => {
   const { avatar_url: image } = ghData;
   return {
     props: {
-      image
+      image,
+      posts
     }
   };
 };

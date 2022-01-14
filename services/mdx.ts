@@ -2,9 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { bundleMDX } from 'mdx-bundler';
+import { PublishedPost, SinglePost } from 'ts/mdx';
 
-// posts path
-export const POSTS_PATH: string = path.join(process.cwd(), 'data/posts/');
+// posts directory path
+export const POSTS_PATH: string = path.join(process.cwd(), 'posts');
 
 // configure esbuild to function properly
 if (process.platform === 'win32') {
@@ -25,21 +26,21 @@ if (process.platform === 'win32') {
 }
 
 // getFileSource
-export const getFileSource = (file): Buffer => {
-  return fs.readFileSync(path.join(POSTS_PATH, file));
+export const getFileSource = (file: string, type: string): Buffer => {
+  return fs.readFileSync(path.join(POSTS_PATH, type, file));
 };
 
 // getAllPublishedPosts
-export const getAllPublishedPosts = () => {
+export const getAllPublishedPosts = (type: string): PublishedPost[] => {
   // read posts path dir and filter out all mdx files
-  const allPosts = fs.readdirSync(POSTS_PATH).filter(path => /\.mdx?$/.test(path));
+  const allPosts: string[] = fs.readdirSync(path.join(POSTS_PATH, type)).filter(path => /\.mdx?$/.test(path));
 
   // generate published posts array
-  const publishedPosts = allPosts.map(post => {
+  const publishedPosts: PublishedPost[] = allPosts.map(post => {
     // get file source
-    const fileSource = getFileSource(post);
+    const fileSource: Buffer = getFileSource(post, type);
     // generate slug
-    const slug = post.replace(/\.mdx?$/, '');
+    const slug: string = post.replace(/\.mdx?$/, '');
     // extract front matter
     const { data } = matter(fileSource);
     // return front matter and slug
@@ -48,6 +49,7 @@ export const getAllPublishedPosts = () => {
       slug,
     };
   }).filter(post => {
+    // filter out unpublished posts
     return post.frontMatter.isPublished;
   });
 
@@ -56,11 +58,11 @@ export const getAllPublishedPosts = () => {
 };
 
 // getPost
-export const getPost = async (slug) => {
+export const getPost = async (slug: string, type: string): Promise<SinglePost> => {
   // bundle the mdx file
   const { code, frontmatter } = await bundleMDX({
-    file: POSTS_PATH + slug + '.mdx',
-    cwd: POSTS_PATH,
+    file: `${POSTS_PATH}/${type}/${slug}.mdx`,
+    cwd: `${POSTS_PATH}/${type}`,
   });
 
   // return code & frontmatter
