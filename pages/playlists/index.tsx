@@ -37,6 +37,7 @@ const Playlists = () => {
                 link={playlist.link}
                 gradient={playlist.gradient}
                 cta={playlist.cta}
+                tags={playlist.tags}
               />
             );
           })}

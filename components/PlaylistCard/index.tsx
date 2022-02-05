@@ -9,6 +9,7 @@ interface Props {
   link: string;
   gradient: any;
   cta: any;
+  tags: string[];
 }
 
 const PlaylistCard = ({
@@ -18,7 +19,9 @@ const PlaylistCard = ({
   link,
   gradient,
   cta,
+  tags,
 }: Props) => {
+  console.log(tags);
   return (
     <div
       className={styles.playlistCard}
@@ -40,6 +43,15 @@ const PlaylistCard = ({
       </div>
       <div className={styles.playlistMeta}>
         <h3>{title}</h3>
+        <div className={styles.playlistTagsContainer}>
+          {tags.map((tag, index) => {
+            return (
+              <span className={styles.playlistTag} key={index}>
+                {tag}
+              </span>
+            );
+          })}
+        </div>
         <p>{description}</p>
         <a href={link} className={styles.playlistCta}>
           Listen Now

@@ -6,10 +6,12 @@
       "isPublished": true,
       "image": "neon-coder-vol-1.jpg",
       "link": "https://open.spotify.com/playlist/5dAjASti3Vu2KJaq1vtRb9?si=9ecc3669ec914c20",
+      "tags": ["synthwave", "vaporwave"],
       "gradient": {
-        "--stop-one": "hsl(284deg 15% 40%) 0%",
-        "--stop-two": "hsl(284deg 14% 30%) 38%",
-        "--stop-three": "hsl(283deg 14% 20%) 100%"
+        "--color-one": "hsl(284deg 15% 40%)",
+        "--color-two": "hsl(284deg 14% 30%)",
+        "--color-three": "hsl(283deg 14% 20%)",
+        "--stop-two": "38%"
       },
       "cta": {
         "--cta-bg": "#EDAE8E",
