@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "title": "Neon Coder Vol 1",
+      "description": "Get your leather gloves and leg warmers on and hack the planet.",
+      "isPublished": true,
+      "image": "neon-coder-vol-1.jpg",
+      "link": "https://open.spotify.com/playlist/5dAjASti3Vu2KJaq1vtRb9?si=9ecc3669ec914c20",
+      "gradient": {
+        "--stop-one": "hsl(284deg 15% 40%) 0%",
+        "--stop-two": "hsl(284deg 14% 30%) 38%",
+        "--stop-three": "hsl(283deg 14% 20%) 100%"
+      },
+      "cta": {
+        "--cta-bg": "#EDAE8E",
+        "--cta-text": "#362C3A"
+      }
+    }
+  ]
+}

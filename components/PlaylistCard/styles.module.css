@@ -1,0 +1,56 @@
+.playlistCard {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    110deg,
+    var(--stop-one, #fff 0%),
+    var(--stop-two, #ddd 38%),
+    var(--stop-three, #bbb 100%)
+  );
+  color: white;
+}
+
+.playlistMeta {
+  padding-top: 1rem;
+}
+
+.playlistImage {
+  width: 100%;
+}
+
+.playlistCta {
+  background-color: var(--cta-bg, #fff);
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  color: var(--cta-text, #000);
+}
+
+@media (min-width: 640px) {
+  .playlistCard {
+    flex-direction: row;
+  }
+
+  .playlistImage {
+    width: 30%;
+  }
+
+  .playlistMeta {
+    padding-top: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .playlistCta {
+    width: 50%;
+  }
+}
