@@ -21,7 +21,6 @@ const PlaylistCard = ({
   cta,
   tags,
 }: Props) => {
-  console.log(tags);
   return (
     <div
       className={styles.playlistCard}
