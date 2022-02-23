@@ -12,6 +12,10 @@
   color: white;
 }
 
+.playlistCard:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .playlistMeta {
   padding-top: 1rem;
 }
@@ -20,10 +24,15 @@
   width: 100%;
 }
 
+.playlistDescription {
+  max-width: 75%;
+  text-align: left;
+}
+
 a.playlistCta {
   background-color: var(--cta-bg, #fff);
   text-decoration: none;
-  display: inline-block;
+  display: block;
   text-align: center;
   margin-top: 1rem;
   font-weight: 600;
@@ -70,5 +79,13 @@ a.playlistCta {
 
   .playlistTag {
     margin: 0 4px;
+  }
+
+  .playlistDescription {
+    text-align: center;
+  }
+
+  a.playlistCta {
+    display: inline-block;
   }
 }

@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "title": "Neon Coder Vol 1",
+      "title": "Neon Coder Vol. 1",
       "description": "Get your leather gloves and leg warmers on and hack the planet.",
       "isPublished": true,
       "image": "neon-coder-vol-1.jpg",
@@ -16,6 +16,24 @@
       "cta": {
         "--cta-bg": "#EDAE8E",
         "--cta-text": "#362C3A"
+      }
+    },
+    {
+      "title": "Coding in the Woods Vol. 1",
+      "description": "When the weather is crisp and the days are short, find yourself a log cabin and enjoy.",
+      "isPublished": true,
+      "image": "coding-in-the-woods-vol-1.jpg",
+      "link": "https://open.spotify.com/playlist/5C7j2tAYADS3g8nvApi64W?si=da0064e5be2a470d",
+      "tags": ["acoustic", "indie", "electronic"],
+      "gradient": {
+        "--color-one": "hsl(101deg 11% 45%)",
+        "--color-two": "hsl(100deg 10% 29%)",
+        "--color-three": "hsl(100deg 9% 13%)",
+        "--stop-two": "38%"
+      },
+      "cta": {
+        "--cta-bg": "#6D7E65",
+        "--cta-text": "#21251F"
       }
     }
   ]

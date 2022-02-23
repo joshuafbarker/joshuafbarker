@@ -51,7 +51,7 @@ const PlaylistCard = ({
             );
           })}
         </div>
-        <p>{description}</p>
+        <p className={styles.playlistDescription}>{description}</p>
         <a href={link} className={styles.playlistCta}>
           Listen Now
         </a>
