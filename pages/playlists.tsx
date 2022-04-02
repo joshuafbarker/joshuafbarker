@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import PageLayout from 'layouts/Page';
 import PlaylistCard from 'components/PlaylistCard';
 import playlists from 'data/playlists.json';
@@ -15,9 +15,9 @@ const Playlists = () => {
       </Head>
       <PageLayout>
         <header className={styles.playlistsHeader}>
-          {/* <Link href="/">
+          <Link href="/">
             <a>Home</a>
-          </Link> */}
+          </Link>
           <h1>Playlists</h1>
           <p>Developers rely heavily on music in their day to day lives.</p>
           <p>
