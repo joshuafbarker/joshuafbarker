@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import GlobalStyle from 'components/GlobalStyle';
+import Navigation from 'components/Navigation';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -18,7 +19,10 @@ export default function MyApp({ Component, pageProps }) {
       {/* global styles */}
       <GlobalStyle />
 
-      <Component {...pageProps} />
+      <div className="container">
+        <Navigation />
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }

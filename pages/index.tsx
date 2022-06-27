@@ -1,7 +1,5 @@
-import HeyThere from 'components/HeyThere';
-
 const HomePage = () => {
-  return <HeyThere />;
+  return <div>what up</div>;
 };
 
 export default HomePage;
