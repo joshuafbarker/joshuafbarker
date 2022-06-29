@@ -7,6 +7,7 @@ const NavBar = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 0;
 `;
 
@@ -25,12 +26,28 @@ const PictureLink = styled.div`
     font-size: 1.5rem;
     text-decoration: none;
     font-weight: 800;
-    color: #2b2b2b;
     transition: color 150ms ease-out;
-  }
-
-  a:hover {
     color: #4b4b4b;
+    
+    &:hover {
+      color: #2b2b2b;
+    }
+  }
+`;
+
+// NavLink component
+const NavLink = styled.a`
+  padding: .5rem 1rem;
+  margin: 0 .25rem;
+  border-radius: .25rem;
+  transition: background-color 150ms ease-out;
+  text-decoration: none;
+  color: #4b4b4b;
+  font-weight: 600;
+
+
+  &:hover {
+    background-color: #cfcfcf;
   }
 `;
 
@@ -48,9 +65,9 @@ const Navigation = () => {
         <Link href="/">jb.</Link>
       </PictureLink>
       <div>
-        <a href="#">link 1</a>
-        <a href="#">link 2</a>
-        <a href="#">link 3</a>
+        <NavLink href="#">link 1</NavLink>
+        <NavLink href="#">link 2</NavLink>
+        <NavLink href="#">link 3</NavLink>
       </div>
     </NavBar>
   );
