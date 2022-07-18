@@ -65,9 +65,7 @@ const Navigation = () => {
         <Link href="/">jb.</Link>
       </PictureLink>
       <div>
-        <NavLink href="#">link 1</NavLink>
-        <NavLink href="#">link 2</NavLink>
-        <NavLink href="#">link 3</NavLink>
+        <NavLink href="#">Blog</NavLink>
       </div>
     </NavBar>
   );
