@@ -1,1 +1,8 @@
+# File System
 .DS_Store*
+
+# Node/npm
+node_modules/
+
+# eleventy
+_site/
