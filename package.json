@@ -8,5 +8,9 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
   }
 }
