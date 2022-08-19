@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joshua Barker</title>
 
-    {% set css %}
+    {% set globalCSS %}
       {% include "css/global.css" %}
     {% endset %}
-    <style>{{ css | cssmin | safe }}</style>
+    <style>{{ globalCSS | cssmin | safe }}</style>
+
+    {% if css %}
+      {% set layoutCSS %}
+        {% include ["css/", css] | join %}
+      {% endset %}
+      <style>{{ layoutCSS | cssmin | safe }}</style>
+    {% endif %}
   </head>
   <body>
     {{ content | safe }}
