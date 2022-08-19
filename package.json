@@ -12,5 +12,8 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve"
+  },
+  "dependencies": {
+    "clean-css": "^5.3.1"
   }
 }
