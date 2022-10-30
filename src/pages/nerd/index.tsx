@@ -5,6 +5,7 @@ const Nerd = () => {
     <>
       <Hero>
         <h1>Nerd Hub</h1>
+        <p>A place to channel my inner nerd and share it with... the World.</p>
       </Hero>
     </>
   );
