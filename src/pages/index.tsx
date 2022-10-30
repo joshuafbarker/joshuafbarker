@@ -1,7 +1,27 @@
+import styles from "../styles/pages/home.module.scss";
+import Content from "../components/Content";
+import Hero from "../components/Hero";
+import Link from "next/link";
+
 const IndexPage = () => {
   return (
     <>
-      <h1>Hello world, I'm Josh</h1>
+      <Hero>
+        <h1 className={styles.title}>Hello world, I'm Josh.</h1>
+        <p className={styles.subtitle}>
+          Senior Engineer @{" "}
+          <a
+            className={styles.companyLink}
+            href="https://redventures.com"
+            target="_blank"
+          >
+            Red Ventures.
+          </a>
+        </p>
+      </Hero>
+      <Content>
+        <Link href="/nerd">Nerd Hub</Link>
+      </Content>
     </>
   );
 };

@@ -1,0 +1,48 @@
+.header {
+  --link-color: #222;
+  --link-after-color: transparent;
+  --visibility: hidden;
+
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+}
+
+.logoLink {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--link-color);
+  position: relative;
+  display: inline;
+  transition: color 0.2s ease-out;
+
+  &::after {
+    content: "/home";
+    position: absolute;
+    left: 0;
+    color: var(--link-after-color);
+    transition: all 0.2s ease-in;
+    visibility: var(--visibility);
+  }
+
+  &:hover {
+    --link-color: transparent;
+    --link-after-color: #222;
+    --visibility: visible;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 2.25rem;
+
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #222;
+  }
+}
