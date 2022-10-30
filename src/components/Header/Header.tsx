@@ -8,9 +8,9 @@ const Header = () => {
         JB
       </Link>
       <nav className={styles.nav}>
-        <a href="#">github.</a>
-        <a href="#">twitter.</a>
-        <a href="#">joshuafbarker@icloud.com</a>
+        <a href="https://github.com/joshuafbarker">github.</a>
+        <a href="https://twitter.com/joshuafbarker">twitter.</a>
+        <a href="mailto:joshuafbarker@icloud.com">joshuafbarker@icloud.com</a>
       </nav>
     </header>
   );
