@@ -1,4 +1,5 @@
-import Hero from "src/components";
+import Hero from "src/components/Hero";
+import Content from "src/components/Content";
 
 const Nerd = () => {
   return (

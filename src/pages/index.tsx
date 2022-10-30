@@ -1,6 +1,6 @@
 import styles from "../styles/pages/home.module.scss";
-import Content from "../components/Content";
-import Hero from "../components/Hero";
+import Content from "src/components/Content";
+import Hero from "src/components/Hero";
 import Link from "next/link";
 
 const IndexPage = () => {
