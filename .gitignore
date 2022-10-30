@@ -6,3 +6,8 @@ node_modules/
 
 # Next
 .next
+/out/
+/build
+
+# TypeScript
+next-env.d.ts
