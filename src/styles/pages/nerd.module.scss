@@ -1,0 +1,15 @@
+.readingOrders {
+  list-style: circle;
+  margin-top: 1rem;
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #222;
+
+    &:hover {
+      color: #88d181;
+    }
+  }
+}
