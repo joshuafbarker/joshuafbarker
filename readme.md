@@ -7,3 +7,5 @@ I am a passionate front-end engineer with over a decade of experience. I take pr
 - TypeScript, JavaScript, React, Vue, Svelte
 - CSS, SASS, Tailwind
 - HTML
+
+[![An image of @joshuafbarker9's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/joshuafbarker9)](https://holopin.io/@joshuafbarker9)
